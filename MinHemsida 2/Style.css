@@ -1,0 +1,197 @@
+﻿body {
+    background-image: url('Bilder/bild2.jpg');
+    background-size: cover;
+}
+
+#form1 {
+    position: absolute;
+    left: 35%;
+    bottom: 65%;
+    top: 35%;
+    width: 30%;
+    height: 200px;
+    padding: 8px 10px;
+    text-align: center;
+    margin: auto;
+}
+
+#myForm {
+    position: absolute;
+    left: 35%;
+    bottom: 65%;
+    top: 35%;
+    width: 30%;
+    height: 200px;
+    padding: 8px 10px;
+    background-color: gray;
+    border: 2px solid black;
+    text-align: center;
+    margin: auto;
+}
+
+#prisvara {
+    position: absolute;
+    left: 35%;
+    bottom: 65%;
+    top: 35%;
+    width: 30%;
+    height: 200px;
+    padding: 8px 10px;
+    background-color: gray;
+    border: 2px solid black;
+    text-align: center;
+    margin: auto;
+}
+
+.test {
+    color: white;
+    text-align: center;
+}
+
+
+
+table {
+    border-collapse: collapse;
+    position: absolute;
+    right: 65%;
+    left: 35%;
+    bottom: 70%;
+    top: 30%;
+    width: 600px;
+    color: white;
+    font-family: monospace;
+    font-size: 20px;
+    background-color: grey;
+}
+
+th {
+    background-color: white;
+    color: black;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+
+.label {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+    font-size: 17px;
+    position: absolute;
+    left: 44%;
+    text-align: center;
+}
+
+#text {
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+    text-align: center;
+}
+
+#text2 {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+    text-align: center;
+}
+
+.input {
+    width: 50%;
+    padding: 8px 10px;
+    border: 1px solid black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    color: black;
+    border-radius: 10px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+        /* Ändrar färgen när man har musen på länken till svart */
+        li a:hover {
+            background-color: #111;
+        }
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+.formInput {
+    width: 50%;
+    padding: 8px 10px;
+    border: 1px solid black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    color: black;
+    border-radius: 10px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.label1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    position: absolute;
+    left: 22%;
+}
+
+.loginbox {
+    position: absolute;
+    right: 37%;
+    top: 25%;
+    width: 25%;
+    text-align: center;
+    margin: auto;
+}
+
+.kontakt {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    bottom: 50%;
+    top: 50%;
+}
+
+.startsida{
+    text-align:center;
+
+}
+
+.login{
+    text-align:center;
+    bottom: 50%;
+    top:50%;
+    left:50%;
+    right:50%;
+    position:absolute;
+    
+    
+}
+
+

@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Startsida</title>
+    <link href="~/Style.css" rel="stylesheet" />
+</head>
+<body>
+    <ul>
+        <li>@Html.ActionLink("Startsida", "Index", "Home")</li>
+        <li>@Html.ActionLink("Mina Filmer", "Index", "Filmer")</li>
+        <li>@Html.ActionLink("Lägg till Filmer", "Create", "Filmer")</li>
+        <li>@Html.ActionLink("Kontakt", "Index", "Kontakt")</li>
+        <li>@Html.ActionLink("Jquery", "Index", "Jquery")</li>
+        <li>@Html.ActionLink("Javascript", "Index", "Javascript")</li>
+
+    </ul>
+    <br>
+
+
+    <h1>Välkommen!</h1>
+    <br />
+    <br />
+    <div id="text">
+        <p>Detta är min första riktiga hemsida som jag har jobbat med under kursen Webbprogrammering!</p>
+        <p>Hemsidan har ett par enkla funktioner som jag skulle vilja att du testar.</p>
+        <p>På sidan om mina filmer kommer du kunna se en lista med filmer som du själv har valt att lägga in, kul!</p>
+        <p>Jag har även lagt in två stycken funktioner med jquery och javascript.</p>
+        <p>Dessa två funktioner hänger inte direkt ihop med mitt tema som jag har på sidan vilket är film</p>
+        <p>Men det kan vara kul att testa dem ändå, surfa bara vidare genom meny systemet längst upp på sidan så kan du testa dessa!</p>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿@model MinHemsida_2.Models.Inloggning
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="~/Style.css" rel="stylesheet" />
+</head>
+<body>
+    
+    <!--Detta är min loginform där användaren matar in sina inloggningsuppgifter-->
+    @using (Html.BeginForm())
+     {
+        <h1>Logga in</h1>
+        <div class="loginbox">
+            <div class="label1">Användarnamn: </div><br /> <br />
+            
+            <!--Html helper som kopplar inmatningen till min Inloggnings model-->
+            @Html.TextBoxFor(m => m.Användarnamn, new { @class = "input"}) <br /> <br />
+
+            <div class="label1">Lösenord: </div><br /> <br />
+
+            @Html.PasswordFor(m => m.Lösenord, new { @class = "input" }) <br />
+            <br />
+
+            <input class="button" type="submit" value="Logga in" />
+        </div>
+       
+     }
+</body>
+</html>

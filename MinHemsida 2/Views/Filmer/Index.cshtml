@@ -1,0 +1,52 @@
+﻿@model List<MinHemsida_2.Film>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Filmer</title>
+    <link href="~/Style.css" rel="stylesheet" />
+</head>
+<body>
+    <ul>
+        <li>@Html.ActionLink("Startsida", "Index", "Home")</li>
+        <li>@Html.ActionLink("Mina Filmer", "Index", "Filmer")</li>
+        <li>@Html.ActionLink("Lägg till Filmer", "Create", "Filmer")</li>
+        <li>@Html.ActionLink("Kontakt", "Index", "Kontakt")</li>
+        <li>@Html.ActionLink("Jquery", "Index", "Jquery")</li>
+        <li>@Html.ActionLink("Javascript", "Index", "Javascript")</li>
+
+    </ul>
+    <br />
+    <h1>Mina filmer</h1>
+    <div id="text2">
+        <p>Här kan du se en lista på dina filmer!</p>
+        <p>För att lägga till filmer i listan klicka på "Lägg till filmer" i meny systemet. </p>
+        <p>Filmerna kommer sedan att visas upp här!</p>
+    </div>
+    <div>
+        <table>
+            <tr><th>Filmens Namn</th><th>Regissör</th></tr>
+
+            <!--Visar upp det som finns i databasen-->
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Namn)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Regissör)
+                    </td>
+                </tr>
+            }
+        </table>
+
+    </div>
+</body>
+</html>

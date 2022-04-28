@@ -1,0 +1,91 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Javascript</title>
+    <link href="~/Style.css" rel="stylesheet" />
+</head>
+<body>
+    <ul>
+        <li>@Html.ActionLink("Startsida", "Index", "Home")</li>
+        <li>@Html.ActionLink("Mina Filmer", "Index", "Filmer")</li>
+        <li>@Html.ActionLink("Lägg till Filmer", "Create", "Filmer")</li>
+        <li>@Html.ActionLink("Kontakt", "Index", "Kontakt")</li>
+        <li>@Html.ActionLink("Jquery", "Index", "Jquery")</li>
+        <li>@Html.ActionLink("Javascript", "Index", "Javascript")</li>
+
+    </ul>
+    <h1>Min Javascript funktion</h1>
+
+    <div id="text">
+        <p>På denna sidan kan du lägga till filmer som du vill köpa eller hyra som vi sedan lägger ihop och ger dig den totala summan.</p>
+        <p>Du får även reda på ifall det tillkommer frakt beroende på priset.</p>
+    </div>
+
+    <br />
+    <br />
+    <br />
+
+    <!--Inmatning kopplad till funktionen beräknaPris-->
+    <form id="form1" name="myForm">
+        Film 1 <input type="text" id="prisvara1" name="prisvara1"> <br><br>
+        Film 2 <input type="text" id="prisvara2" name="prisvara2"> <br><br>
+        Film 3 <input type="text" id="prisvara3" name="prisvara3"> <br><br>
+
+        <button type="button" onclick="beräknaPris()">Beräkna</button>
+    </form>
+
+    <!--Här skrivs resultatet ut från funktionen beräknaPris-->
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div id="text2">
+        <div id="pris"></div>
+        <div id="prismedmoms"></div>
+        <div id="prisfrakt"></div>
+    </div>
+    
+    <script>
+        function beräknaPris() {
+            //hämtar in värdena från inmatningen av användare genom "getElementById" och sätter in dem i en variabel
+            var vara1 = document.getElementById("prisvara1").value * 1;
+            var vara2 = document.getElementById("prisvara2").value * 1;
+            var vara3 = document.getElementById("prisvara3").value * 1;
+           
+
+            var sum = vara1 + vara2 + vara3;
+
+            document.getElementById("pris").innerHTML = "Pris: " + sum + " kr";
+
+            var sumMoms = sum * 1.25;
+
+            document.getElementById("prismedmoms").innerHTML = "Pris med Moms: " + sumMoms + " kr";
+
+            
+            if (sumMoms < 500) {
+                document.getElementById("prisfrakt").innerHTML = "Pris frakt: Frakt 50:-";
+                
+            }
+            else {
+                document.getElementById("prisfrakt").innerHTML = "Frakt: Fri frakt";
+                
+            }
+
+        }
+
+    </script>
+
+    <div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+﻿@model MinHemsida_2.Film 
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+    <link href="~/Style.css" rel="stylesheet" />
+</head>
+<body>
+    <ul>
+        <li>@Html.ActionLink("Startsida", "Index", "Home")</li>
+        <li>@Html.ActionLink("Mina Filmer", "Index", "Filmer")</li>
+        <li>@Html.ActionLink("Lägg till Filmer", "Create", "Filmer")</li>
+        <li>@Html.ActionLink("Kontakt", "Index", "Kontakt")</li>
+        <li>@Html.ActionLink("Jquery", "Index", "Jquery")</li>
+        <li>@Html.ActionLink("Javascript", "Index", "Javascript")</li>
+
+    </ul>
+    <br />
+    <h1>Lägg till filmer!</h1>
+    <div id="text">
+        <p>Lägg gärna till dina favorit filmer så kan du hålla koll på dem i listan!</p>
+        <p>Du kommer automatiskt bli omdirigerad till din film sida när du har lagt till en film i listan.</p>
+    </div>
+     
+    @using (Html.BeginForm())
+     {
+        <div id="form1">
+            <div class="label">Film: </div><br /><br />
+            <!--Kopplar till min Film Model och lägger till ett namn i databasen-->
+            @Html.EditorFor(m => Model.Namn) <br /><br />
+            <div class="label">Regissör:</div><br /><br />
+            <!--Kopplar till min Film Model och lägger till en regissör i databasen-->
+            @Html.EditorFor(m => Model.Regissör) <br />
+            <br />
+
+            <input id="button" type="submit" value="Lägg till" />
+        </div>
+
+     }
+
+</body>
+</html>

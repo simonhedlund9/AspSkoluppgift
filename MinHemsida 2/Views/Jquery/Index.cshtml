@@ -1,0 +1,53 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="~/Style.css" rel="stylesheet" />
+</head>
+<body>
+
+    <ul>
+        <li>@Html.ActionLink("Startsida", "Index", "Home")</li>
+        <li>@Html.ActionLink("Mina Filmer", "Index", "Filmer")</li>
+        <li>@Html.ActionLink("Lägg till Filmer", "Create", "Filmer")</li>
+        <li>@Html.ActionLink("Kontakt", "Index", "Kontakt")</li>
+        <li>@Html.ActionLink("Jquery", "Index", "Jquery")</li>
+        <li>@Html.ActionLink("Javascript", "Index", "Javascript")</li>
+
+    </ul>
+
+    <script>
+        $(document).ready(function () { // document.ready funktion gör så att funktionen väntar med att köras tills att dokumentet är färdig laddat
+            $("#hide").click(function () { // här kopplar jag funktionen till min "button"
+                $(".test").hide();// detta gör så att allting som är tilldelat till klassen ".test" försvinner från skärmen
+            });
+        });
+
+        $(document).ready(function () { 
+            $("#show").click(function () { 
+                $(".test").show();// detta gör så att allting som är tilldelat till klassen ".test" visas på skärmen igen efter att det blivit borttaget
+            });
+        });
+    </script>
+
+    <h2 class="test">Välkommen till min jquery funktion!</h2>
+
+    <p class="test">Detta är en mening som kommer att försvinna.</p>
+    <p id="text">Denna meningen finns kvar!</p>
+
+    <div id="form1">
+        <!--Knappar som man kan klicka på som är kopplad till mitt jquery script ovanför-->
+        <button type="button" id="hide">Göm texten!</button>
+        <button type="button" id="show">Visa texten!</button>
+
+    </div>
+</body>
+</html>
